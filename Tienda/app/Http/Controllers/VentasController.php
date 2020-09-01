@@ -64,5 +64,15 @@
 
             Ventas::create($request->only(["valor_unidad","fecha","factura","cantidad","documento","id_articulo","id_cliente"]));
             return back()->with('success','Item created successfully!');
-        }    
+        } 
+        
+        //Metodo para eliminar
+            public function destroy($id)
+            {
+                $venta = Ventas::find($id);
+                
+                $venta->delete();
+        
+                return redirect('ventas/showlist');
+            }
     }

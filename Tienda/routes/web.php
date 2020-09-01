@@ -27,4 +27,6 @@ Route::get('ventas/create', 'VentasController@create')->name("ventas.create");
 Route::post('ventas/save', 'VentasController@save')->name("ventas.save");
 //Ruta para mostrar toda la lista de las ventas
 Route::get('ventas/showlist', 'VentasController@showlist')->name("ventas.showlist");
+//Ruta para eliminar una venta
+Route::delete('ventas/delete/{id}', 'VentasController@destroy')->name('ventas.destroy');
 

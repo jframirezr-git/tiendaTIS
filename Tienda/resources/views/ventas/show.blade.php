@@ -16,6 +16,12 @@
                     <b>ID articulo:</b> {{ $data["sales"]["id_articulo"] }}<br />
                     <b>ID cliente:</b> {{ $data["sales"]["id_cliente"] }}<br />
                 </div>
+                <form method="POST" action="{{ url("ventas/delete/{$data["sales"]["id"]}") }}">
+                    @csrf
+                    @method('DELETE')
+ 
+                <button class="btn btn-primary" type="submit">Eliminar</button>
+                </form>
             </div>
         </div>
     </div>
