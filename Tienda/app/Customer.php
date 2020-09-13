@@ -68,7 +68,7 @@ class Customer extends Model
         $this->attributes['address'] = $address;
     }
 
-    //Relacion uno a muvhos con Sale y Car
+    //Relacion uno a muchos con Sale y Car
     public function sale()
     {
         return $this->hasMany('App\Sale');
