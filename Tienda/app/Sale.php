@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Sale extends Model
 {
      //attributes 
-     protected $fillable = ['unit_value','date', 'invoice', 'quantity', 'item_id', 'customer_id', "car_id"];
+     protected $fillable = ['unit_value','date', 'invoice', 'quantity', 'customer_id', "car_id"];
 
      //getters and setters
      public function getId()
@@ -56,16 +56,6 @@ class Sale extends Model
      public function setQuantity($quantity)
      {
          $this->attributes['quantity'] = $quantity;
-     }
-
-     public function getItemId()
-     {
-         return $this->attributes['item_id'];
-     }
- 
-     public function setItemId($item_id)
-     {
-         $this->attributes['item_id'] = $item_id;
      }
 
      public function getCustomerId()
