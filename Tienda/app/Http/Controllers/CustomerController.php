@@ -1,11 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
-namespace App\Sale;
-namespace App\Car;
 use App\Customer;
 use Illuminate\Http\Request;
-use Illuminate\Database\Eloquent\Model;
 
 class CustomerController extends Controller
 {
@@ -70,14 +67,4 @@ class CustomerController extends Controller
         return redirect('customer/show');
     }
 
-    //Relacion uno a uno con Ventas y Carro de compras
-    public function sale()
-    {
-        return $this->hasMany('App\Sale');
-    }
-
-    public function car()
-    {
-        return $this->hasMany('App\Car');
-    }
 }
