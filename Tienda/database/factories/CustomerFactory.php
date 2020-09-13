@@ -2,7 +2,7 @@
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
-use App\Cliente;
+use App\Customer;
 use Faker\Generator as Faker;
 use Illuminate\Support\Str;
 
@@ -17,9 +17,9 @@ use Illuminate\Support\Str;
 |
 */
 
-$factory->define(Cliente::class, function (Faker $faker) {
+$factory->define(Customer::class, function (Faker $faker) {
     return [
-        'documento' => $faker->numberBetween($min = 1, $max = 10000),
-        'telefono' => $faker->numberBetween($min = 1, $max = 10000),
+        'document' => $faker->numberBetween($min = 1, $max = 10000),
+        'phone' => $faker->numberBetween($min = 1, $max = 10000),
     ];
 });
