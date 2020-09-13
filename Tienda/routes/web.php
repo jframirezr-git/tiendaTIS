@@ -27,3 +27,6 @@ Route::delete('customer/delete/{id}', 'CustomerController@deletecustomer')->name
 
 //rutas input
 Route::get('/input', 'InputController@index')->name("input.index");
+
+//rutas output
+Route::get('/output', 'OutputController@index')->name("output.index");
