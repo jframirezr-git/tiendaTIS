@@ -27,3 +27,8 @@ Route::delete('customer/delete/{id}', 'CustomerController@deletecustomer')->name
 
 //rutas input
 Route::get('/input', 'InputController@index')->name("input.index");
+Route::get('/input/show/', 'InputController@showInputs')->name("input.showInputs");
+Route::get('/input/show/{id}', 'InputController@show')->name("input.show");
+Route::get('/input/create', 'InputController@create')->name("input.create");
+Route::post('/input/save', 'InputController@save')->name("input.save");
+Route::delete('input/delete/{id}', 'InputController@deleteinput')->name('input.deleteinput');
