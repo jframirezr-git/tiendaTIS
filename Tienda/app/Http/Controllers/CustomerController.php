@@ -17,7 +17,7 @@ class CustomerController extends Controller
         $data["title"] = "Clientes registrados";
         $data["all_customer"] = Customer::all();
 
-        return view('customer.show_customers')->with("data",$data);
+        return view('customer.showCustomers')->with("data",$data);
     }
 
     public function show($id)
