@@ -13,7 +13,7 @@ class InputController extends Controller
     public function showInputs(){
         $data = [];
 
-        $data["title"] = "Clientes registrados";
+        $data["title"] = "Entradas registradas";
         $data["all_input"] = Input::all();
 
         return view('input.showInputs')->with("data",$data);
@@ -37,7 +37,7 @@ class InputController extends Controller
     public function create()
     {
         $data = [];
-        $data["title"] = "Crear cliente";
+        $data["title"] = "Crear entrada";
         $data["all_input"] = Input::all();
 
         return view('input.create')->with("data",$data);
