@@ -30,3 +30,6 @@ Route::get('/input', 'InputController@index')->name("input.index");
 
 //rutas output
 Route::get('/output', 'OutputController@index')->name("output.index");
+
+//rutas items
+Route::get('/items', 'ItemController@show')->name("item.show");
