@@ -35,3 +35,7 @@ Route::delete('input/delete/{id}', 'InputController@deleteinput')->name('input.d
 
 //rutas output
 Route::get('/output', 'OutputController@index')->name("output.index");
+
+//rutas items
+Route::get('/items', 'ItemController@show')->name("item.show");
+
