@@ -19,8 +19,8 @@
                 <form method="POST" action="{{ url("customer/delete/{$data["customers"]["id"]}") }}">
                     @csrf
                     @method('DELETE')
- 
-                <button class="btn btn-primary" type="submit">Eliminar</button>
+                    <button class="btn btn-primary" type="submit">Eliminar</button>
+                </form>
             </div>
         </div>
     </div>
