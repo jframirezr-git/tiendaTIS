@@ -33,3 +33,7 @@ Route::get('/output', 'OutputController@index')->name("output.index");
 
 //rutas items
 Route::get('/items', 'ItemController@show')->name("item.show");
+Route::get('/items/create', 'ItemController@create')->name("item.create");
+Route::post('/items/save', 'ItemController@save')->name("item.save");
+Route::get('/items/show/{id}', 'ItemController@showItem')->name("item.show_item");
+Route::delete('items/delete/{id}', 'ItemController@deleteItem')->name('item.delete');
