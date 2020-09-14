@@ -38,4 +38,3 @@ Route::get('/output', 'OutputController@index')->name("output.index");
 
 //rutas items
 Route::get('/items', 'ItemController@show')->name("item.show");
-
