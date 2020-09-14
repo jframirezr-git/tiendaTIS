@@ -3,7 +3,13 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-Class supplier extends Model{
+/**
+ * @method static findOrFail($id)
+ * @method static create(array $only)
+ * @method static find($id)
+ */
+
+Class Supplier extends Model{
     protected $fillable = ['name','document', 'mail', 'direction', 'phone'];
 
     public function getId()
@@ -61,5 +67,9 @@ Class supplier extends Model{
     public function setPhone($phone)
     {
         $this->attributes['phone'] = $phone;
+    }
+
+    public function  item(){
+        $this->hasMany('App\Item');
     }
 }
