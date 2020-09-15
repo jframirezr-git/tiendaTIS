@@ -10,7 +10,7 @@ use Illuminate\Database\Eloquent\Model;
  */
 
 Class Supplier extends Model{
-    protected $fillable = ['name','document', 'mail', 'direction', 'phone'];
+    protected $fillable = ['name', 'contact', 'document', 'mail', 'direction', 'phone'];
 
     public function getId()
     {
@@ -30,6 +30,16 @@ Class Supplier extends Model{
     public function setName($name)
     {
         $this->attributes['name'] = $name;
+    }
+
+    public function getContact()
+    {
+        return $this->attributes['contact'];
+    }
+
+    public function setContact($contact)
+    {
+        $this->attributes['name'] = $contact;
     }
 
     public function getDocument()

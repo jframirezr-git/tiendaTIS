@@ -21,11 +21,12 @@ class SaleController extends Controller
     public function show($id){
         $data = [];
         $sale = sale::findOrFail($id);
-        $data["unit_value"] = $sale->UniteValue();
+        $data["unit_value"] = $sale->getUniteValue();
         $data["date"] = $sale->getDate();
         $data["invoice"] = $sale->getInvoice();
         $data["quantity"] = $sale-> getQuantity();
-        $data["customer_id"] = $sale->getCustomerIde();
+        $data["customer_id"] = $sale->getCustomerId();
+        $data["item_id"] = $sale->getItemId();
         $data["car_id"] = $sale->getCarId();
         $data["sale"] = $sale;
         return view('sale.show')->with("data",$data);
