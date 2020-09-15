@@ -19,7 +19,7 @@
         <div class="container">
             <div class="card">
                 <div class="card-body">
-                    <h4 class="card-title">{{$all_all_input->getId()}}</h4>
+                    <h4 class="card-title">{{$all_input->getId()}}</h4>
                     <h6 class="text-muted card-subtitle mb-2">Valor:{{$all_input->getValue()}}</h6>
                     <h6 class="text-muted card-subtitle mb-2">Cantidad:{{$all_input->getQuantity()}}</h6>
                     <a class="btn btn-primary" href="{{ route('input.show', ['id' => $all_input->getId()]) }}">Ver más</a>
