@@ -52,7 +52,7 @@ class Item extends Model{
     }
     public function getStock()
     {
-        return $this->attributes['Stock'];
+        return $this->attributes['stock'];
     }
 
     public function setStock($stock)
