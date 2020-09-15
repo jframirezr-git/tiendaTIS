@@ -20,6 +20,7 @@
                         <h4 class="card-title">{{$all_items->getName()}}</h4>
                         <h6 class="text-muted card-subtitle mb-2">Marca:{{$all_items->getBrand()}}</h6>
                         <h6 class="text-muted card-subtitle mb-2">Stock:{{$all_items->getStock()}}</h6>
+                        <h6 class="text-muted card-subtitle mb-2">Valor:{{$all_items->getValue()}}</h6>
                         <a class="btn btn-primary" href="{{ route('item.show_item', ['id' => $all_items->getId()]) }}">Ver más</a>
                     </div>
                 </div>

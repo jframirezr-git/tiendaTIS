@@ -74,9 +74,4 @@ class Customer extends Model
         return $this->hasMany('App\Sale');
     }
 
-    public function car()
-    {
-        return $this->hasMany('App\Car');
-    }
-
 }

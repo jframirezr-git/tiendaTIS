@@ -19,6 +19,7 @@ class CreateItemsTable extends Migration
             $table->text('brand');
             $table->text('reference');
             $table->integer('stock');
+            $table->integer('value');
             $table->foreignId('supplier_id');
             $table->timestamps();
 

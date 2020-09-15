@@ -12,10 +12,8 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('customer.index');
-});
+//ruta principal
+Route::get('/', 'ItemController@show')->name("item.show");
 
 //rutas customer
 Route::get('/customer', 'CustomerController@index')->name("customer.index");
@@ -58,3 +56,4 @@ Route::delete('/supplier/delete/{id}', 'SupplierController@deletecustomer')->nam
 //rutas ventas
 Route::get('/sale', 'SaleController@showList')->name("sale.show_list");
 Route::get('/sale/show/{id}', 'SaleController@show')->name("sale.show");
+Route::post('/sale/save', 'SaleController@save')->name("sale.save");

@@ -14,8 +14,8 @@
             <div class="collapse navbar-collapse"
                 id="navcol-1">
                 <ul class="nav navbar-nav">
-                    <li class="nav-item"><a class="nav-link active" href="{{ url('/sale') }}">Ventas</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{{url('/customer/show/'}}">Clientes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ url('/sale') }}">Ventas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{url('/customer/show')}}">Clientes</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{ url('/supplier') }}">Proveedores</a></li>
                 </ul>
                 <form class="form-inline mr-auto" target="_self">
