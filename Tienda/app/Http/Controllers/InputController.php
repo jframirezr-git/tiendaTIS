@@ -29,6 +29,7 @@ class InputController extends Controller
         $data["date"] = $data_input->getDate();
         $data["bill"] = $data_input->getBill();
         $data["quantity"] = $data_input->getQuantity();
+        $data["item_id"] = $data_input->getItemId();
         $data["inputs"] = $data_input;
 
         return view('input.show')->with("data",$data);
@@ -50,8 +51,9 @@ class InputController extends Controller
             "date" => "required",
             "bill" => "required",
             "quantity" => "required",
+            "item_id" => "required",
         ]);
-        Input::create($request->only(["value","date","bill","quantity"]));
+        Input::create($request->only(["value","date","bill","quantity","item_id"]));
 
         return back()->with('Éxito','Elemento creado satisfactoriamente');
     }
