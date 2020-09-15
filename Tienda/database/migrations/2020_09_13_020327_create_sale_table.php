@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Cars extends Migration
+class CreateSaleTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,14 @@ class Cars extends Migration
      */
     public function up()
     {
-        Schema::create('cars', function (Blueprint $table) {
+        Schema::create('sales', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->integer('unit_value');
+            $table->text('date');
+            $table->text('invoice');
+            $table->integer('quantity');
+            $table->foreignId('item_id');
             $table->foreignId('customer_id');
-            $table->boolean('status');
-            $table->json('item_list');
             $table->timestamps();
         });
     }
@@ -29,6 +32,6 @@ class Cars extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('cars');
+        Schema::dropIfExists('sales');
     }
 }

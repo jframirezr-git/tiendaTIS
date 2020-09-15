@@ -10,7 +10,7 @@ use Illuminate\Database\Eloquent\Model;
  */
 
 class Item extends Model{
-    protected $fillable = ['name','brand', 'reference', 'stock', 'supplier_id'];
+    protected $fillable = ['name','brand', 'reference', 'stock', 'value', 'supplier_id'];
 
     public function getId()
     {
@@ -70,6 +70,16 @@ class Item extends Model{
         $this->attributes['supplier_id'] = $supplier_id;
     }
 
+    public function getValue()
+    {
+        return $this->attributes['value'];
+    }
+
+    public function setValue($value)
+    {
+        $this->attributes['value'] = $value;
+    }
+
 
     //Relaciones
     public function supplier(){
@@ -78,6 +88,10 @@ class Item extends Model{
 
     public function return(){
         $this->hasMany('App\ReturnModel');
+    }
+
+    public function sale(){
+        $this->hasMany('App\Sale');
     }
 
 }

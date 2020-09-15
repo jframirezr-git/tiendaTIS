@@ -24,6 +24,8 @@
                         <div class="col-6"><input class="form-control" type="text" placeholder="Ingresa la referencia" name="reference"></div>
                         <div class="col-6"><label class="col-form-label">Stock:</label></div>
                         <div class="col"><input class="form-control" type="number" placeholder="Ingresa el stock" name="stock"></div>
+                        <div class="col-6"><label class="col-form-label">Valor:</label></div>
+                        <div class="col"><input class="form-control" type="number" placeholder="Ingresa el valor" name="value"></div>
                         <div class="col-6"><label class="col-form-label">Id del proveedor:</label></div>
                         <div class="col"><input class="form-control" type="number" placeholder="Ingresa el proveedor id" name="supplier_id"></div>
                     </div>

@@ -12,7 +12,7 @@ use Illuminate\Database\Eloquent\Model;
 class Sale extends Model
 {
      //attributes
-     protected $fillable = ['unit_value','date', 'invoice', 'quantity', 'customer_id', "car_id"];
+     protected $fillable = ['unit_value','date', 'invoice', 'quantity', 'customer_id', 'item_id'];
 
      //getters and setters
      public function getId()
@@ -82,15 +82,6 @@ class Sale extends Model
          $this->attributes['item_id'] = $item_id;
      }
 
-     public function getCarId()
-     {
-        $this->attributes['car_id'];
-     }
-
-     public function setCarId($car_id)
-     {
-         $this->attributes['car_id'] = $car_id;
-     }
 
      //relationships
      public function customer()
@@ -98,9 +89,9 @@ class Sale extends Model
         return $this->belongsTo('App\Customer');
      }
 
-     public function car()
+     public function item()
      {
-        return $this->belongsTo('App\Car');
+        return $this->hasMany('App\Item');
      }
 
 }
