@@ -32,7 +32,6 @@
                 </div>
                 <input class="btn btn-primary" style="margin: 5px;" type="submit" value="Crear" />
             </form>
-            <input type="button" onclick="window.location.href='/input'" value="Volver" />
         </div>
     </div>
 </div>
