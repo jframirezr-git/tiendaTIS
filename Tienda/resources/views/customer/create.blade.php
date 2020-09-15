@@ -3,33 +3,35 @@
 @section("title", $data["title"])
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-    <div class="col-md-8">
-    @include('util.message')
-            <div class="card">
-                <div class="card-header">Crear Cliente</div>
-                <div class="card-body">
-                @if($errors->any())
-                <ul id="errors">
-                    @foreach($errors->all() as $error)
-                        <li>{{ $error }}</li>
-                    @endforeach
-                </ul>
-                @endif
+<div class="row text-center justify-content-center align-items-center" style="margin: 5px;margin-top: 5%;">
+    <div class="col">
+        <div class="container">
+            <h2>Crear Cliente</h2>
+            @include('util.message')
+            @if($errors->any())
+            <ul id="errors">
+            @foreach($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+            </ul>
+            @endif
 
-                <form method="POST" action="{{ route('customer.save') }}">
-                    @csrf
-                    <input type="text" placeholder="Ingresa tu nombre" name="name" value="{{ old('name') }}" /><br>
-                    <input type="number" placeholder="Ingresa tu documento" name="document" value="{{ old('document') }}" /><br>
-                    <input type="text" placeholder="Ingresa tu correo" name="mail" value="{{ old('mail') }}" /><br>
-                    <input type="number" placeholder="Ingresa tu teléfono" name="phone" value="{{ old('phone') }}" /><br>
-                    <input type="text" placeholder="Ingresa tu dirección" name="address" value="{{ old('address') }}" /><br>
-                    <input type="submit" value="Crear" />
-                </form>
-                <input type="button" onclick="window.location.href='/customer'" value="Volver" />
+            <form method="POST" action="{{ route('customer.save') }}">
+                @csrf
+                <div class="form-row text-center justify-content-center align-items-center">
+                    <div class="col-6"><label class="col-form-label">Nombre:</label></div>
+                    <div class="col-6"><input class="form-control" type="text" placeholder="Ingrese su nombre" name="name"></div>
+                    <div class="col-6"><label class="col-form-label">Documento:</label></div>
+                    <div class="col-6"><input class="form-control" type="number" placeholder="Ingrese su documento" name="document"></div>
+                    <div class="col-6"><label class="col-form-label">Correo:</label></div>
+                    <div class="col-6"><input class="form-control" type="text" placeholder="Ingrese su correo" name="mail"></div>
+                    <div class="col-6"><label class="col-form-label">Telefono:</label></div>
+                    <div class="col"><input class="form-control" type="number" placeholder="Ingrese su telefono" name="phone"></div>
+                    <div class="col-6"><label class="col-form-label">Direccion:</label></div>
+                    <div class="col"><input class="form-control" type="number" placeholder="Ingrese su direccion" name="address"></div>
                 </div>
-            </div>
+                <input class="btn btn-primary" style="margin: 5px;" type="submit" value="Crear" />
+            </form>
         </div>
     </div>
 </div>
