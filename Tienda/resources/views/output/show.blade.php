@@ -12,7 +12,7 @@
                     <b>Valor:</b> {{ $data["outputs"]["value"] }}<br/>
                     <b>Fecha:</b> {{ $data["outputs"]["date"] }}<br/>
                     <b>Cantidad:</b> {{ $data["outputs"]["quantity"] }}<br/>
-                    <b>Proveedor:</b> {{ $data["outputs"]["item_id"] }}<br/>
+                    <b>Articulo:</b> {{ $data["outputs"]["item_id"] }}<br/>
                     <input type="button" onclick="window.location.href='/output/show'" value="Volver" />
                 </div>
                 <form method="POST" action="{{ url("output/delete/{$data["outputs"]["id"]}") }}">

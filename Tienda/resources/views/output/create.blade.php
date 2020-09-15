@@ -23,7 +23,7 @@
                     <input type="number" placeholder="Ingresa el valor" name="value" value="{{ old('value') }}" /><br>
                     <input type="date" placeholder="Ingresa la fecha" name="date" value="{{ old('date') }}" /><br>
                     <input type="number" placeholder="Ingresa la cantidad" name="quantity" value="{{ old('quantity') }}" /><br>
-                    <input type="number" placeholder="Ingresa el proveedor" name="item_id" value="{{ old('item_id') }}" /><br>
+                    <input type="number" placeholder="Ingresa el articulo" name="item_id" value="{{ old('item_id') }}" /><br>
                     <input type="submit" value="Crear" />
                 </form>
                 <input type="button" onclick="window.location.href='/output'" value="Volver" />
