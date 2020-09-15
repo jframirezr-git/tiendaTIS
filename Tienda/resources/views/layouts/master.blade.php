@@ -14,7 +14,7 @@
             <div class="collapse navbar-collapse"
                 id="navcol-1">
                 <ul class="nav navbar-nav">
-                    <li class="nav-item"><a class="nav-link active" href="#">Ventas</a></li>
+                    <li class="nav-item"><a class="nav-link " href="#">Ventas</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Clientes</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Proveedores</a></li>
                 </ul>

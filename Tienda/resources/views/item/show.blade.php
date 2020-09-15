@@ -18,6 +18,7 @@
                 <div class="card">
                     <div class="card-body">
                         <h4 class="card-title">{{$all_items->getName()}}</h4>
+                        <h6 class="text-muted card-subtitle mb-2">Marca:{{$all_items->getBrand()}}</h6>
                         <h6 class="text-muted card-subtitle mb-2">Stock:{{$all_items->getStock()}}</h6>
                         <a class="btn btn-primary" href="{{ route('item.show_item', ['id' => $all_items->getId()]) }}">Ver más</a>
                     </div>
@@ -28,7 +29,7 @@
     </div>
     <div class="row text-center">
         <div class="col">
-        <a class="btn btn-primary" type="button" style="margin: 5px;" href="{{ url('/item/create') }}">Crear Producto</a>
+        <a class="btn btn-primary" type="button" style="margin: 5px;" href="{{ url('/items/create') }}">Crear Producto</a>
         </div>
     </div>
 @endsection
