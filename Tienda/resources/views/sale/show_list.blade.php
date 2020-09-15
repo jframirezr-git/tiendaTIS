@@ -1,5 +1,4 @@
 @extends('layouts.master')
-
 @section('styles')
     @parent
     <link href="{{ asset('css/Article-Clean.css') }}" rel="stylesheet">
@@ -11,24 +10,20 @@
 @endsection
 @section('content')
     <div class="row">
-        @foreach($data["supplier"] as $supplier)
+        @foreach($data["sale"] as $sale)
             <div class="col-4 text-center d-lg-flex align-self-center justify-content-lg-start align-items-lg-end">
                 <div class="container">
                     <div class="card">
                         <div class="card-body">
-                            <h4 class="card-title">{{$supplier->getName()}}</h4>
-                            <h6 class="text-muted card-subtitle mb-2">Contacto:{{$supplier->getContact()}}</h6>
-                            <h6 class="text-muted card-subtitle mb-2">Telefono:{{$supplier->getPhone()}}</h6>
-                            <a class="btn btn-primary" href="{{ route('supplier.show', ['id' => $supplier->getId()]) }}">Ver más</a>
+                            <h4 class="card-title">{{$sale->getDate()}}</h4>
+                            <h6 class="text-muted card-subtitle mb-2">Item:{{$sale->getItemId()}}</h6>
+                            <h6 class="text-muted card-subtitle mb-2">Cantidad:{{$sale->getQuantity()}}</h6>
+                            <h6 class="text-muted card-subtitle mb-2">Cliente:{{$sale->getCustomerId()}}</h6>
+                            <a class="btn btn-primary" href="{{ route('sale.show', ['id' => $sale->getId()]) }}">Ver más</a>
                         </div>
                     </div>
                 </div>
             </div>
         @endforeach
-    </div>
-    <div class="row text-center">
-        <div class="col">
-            <a class="btn btn-primary" type="button" style="margin: 5px;" href="{{ url('/supplier/create') }}">Nuevo Proveedor</a>
-        </div>
     </div>
 @endsection

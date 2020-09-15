@@ -47,3 +47,14 @@ Route::get('/items/create', 'ItemController@create')->name("item.create");
 Route::post('/items/save', 'ItemController@save')->name("item.save");
 Route::get('/items/show/{id}', 'ItemController@showItem')->name("item.show_item");
 Route::delete('items/delete/{id}', 'ItemController@deleteItem')->name('item.delete');
+
+//rutas supplier
+Route::get('/supplier', 'SupplierController@showList')->name("supplier.show_list");
+Route::get('/supplier/show/{id}', 'SupplierController@show')->name("supplier.show");
+Route::get('/supplier/create', 'SupplierController@create')->name("supplier.create");
+Route::post('/supplier/save', 'SupplierController@save')->name("supplier.save");
+Route::delete('/supplier/delete/{id}', 'SupplierController@deletecustomer')->name('supplier.delete');
+
+//rutas ventas
+Route::get('/sale', 'SaleController@showList')->name("sale.show_list");
+Route::get('/sale/show/{id}', 'SaleController@show')->name("sale.show");
