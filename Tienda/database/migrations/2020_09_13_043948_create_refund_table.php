@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Returns extends Migration
+class CreateRefundTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class Returns extends Migration
      */
     public function up()
     {
-        Schema::create('returns', function (Blueprint $table) {
+        Schema::create('refunds', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->foreignId('item_id');
             $table->integer('unit_value');
@@ -30,6 +30,6 @@ class Returns extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('returns');
+        Schema::dropIfExists('refunds');
     }
 }

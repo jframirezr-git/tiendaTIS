@@ -11,8 +11,8 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Sale extends Model
 {
-     //attributes
-     protected $fillable = ['unit_value','date', 'invoice', 'quantity', 'customer_id', 'item_id'];
+
+    protected $fillable = ['unit_value','date', 'invoice', 'quantity', 'customer_id', 'item_id'];
 
      //getters and setters
      public function getId()
