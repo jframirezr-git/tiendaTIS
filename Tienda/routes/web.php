@@ -35,6 +35,11 @@ Route::delete('input/delete/{id}', 'InputController@deleteinput')->name('input.d
 
 //rutas output
 Route::get('/output', 'OutputController@index')->name("output.index");
+Route::get('/output/show/', 'OutputController@showOutputs')->name("output.showOutputs");
+Route::get('/output/show/{id}', 'OutputController@show')->name("output.show");
+Route::get('/output/create', 'OutputController@create')->name("outnput.create");
+Route::post('/output/save', 'OutputController@save')->name("output.save");
+Route::delete('output/delete/{id}', 'OutputController@deleteoutput')->name('input.deleteoutput');
 
 //rutas items
 Route::get('/items', 'ItemController@show')->name("item.show");
