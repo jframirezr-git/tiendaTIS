@@ -63,14 +63,23 @@ class Sale extends Model
          $this->attributes['quantity'] = $quantity;
      }
 
-     public function getCustomerId()
+    public function getCustomerId()
+    {
+        return $this->attributes['customer_id'];
+    }
+
+    public function setCustomerId($customer_id)
+    {
+        $this->attributes['customer_id'] = $customer_id;
+    }
+     public function getItemId()
      {
-         return $this->attributes['customer_id'];
+         return $this->attributes['item_id'];
      }
 
-     public function setCustomerId($customer_id)
+     public function setItemId($item_id)
      {
-         $this->attributes['customer_id'] = $customer_id;
+         $this->attributes['item_id'] = $item_id;
      }
 
      public function getCarId()

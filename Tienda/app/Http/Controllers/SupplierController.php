@@ -22,6 +22,7 @@ class SupplierController extends Controller
         $data = [];
         $supplier = supplier::findOrFail($id);
         $data["name"] = $supplier->getName();
+        $data["contact"] = $supplier->getContact();
         $data["document"] = $supplier->getDocument();
         $data["mail"] = $supplier->getMail();
         $data["direction"] = $supplier->getDirection();
@@ -42,20 +43,22 @@ class SupplierController extends Controller
     public function save(Request $request){
         $request->validate([
         "name" => "required",
+        "contact" => "required",
+        "document" => "required",
         "mail" => "required",
         "direction" => "required",
         "phone" => "required",
          ]);
 
-        Supplier::create($request->only(["name","document","mail","direction","phone","document"]));
-        return back()->with('success','Item created successfully!');
+        Supplier::create($request->only(["name","contact","document","mail","direction","phone"]));
+        return back()->with('success','Proveedor agregado');
     }
 
 
     public function destroy($id){
         $supplier = Supplier::find($id);
         $supplier->delete();
-        return redirect('supplier/showlist');
+        return redirect('supplier/show');
     }
 }
 
