@@ -14,7 +14,6 @@
                     <b>Correo:</b> {{ $data["customers"]["mail"] }}<br/>
                     <b>Teléfono:</b> {{ $data["customers"]["phone"] }}<br/>
                     <b>Dirección:</b> {{ $data["customers"]["address"] }}<br/><br/>
-                    <input type="button" onclick="window.location.href='/customer/show'" value="Volver" />
                 </div>
                 <form method="POST" action="{{ url("customer/delete/{$data["customers"]["id"]}") }}">
                     @csrf
