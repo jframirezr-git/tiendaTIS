@@ -30,7 +30,7 @@
 </div>
 <div class="row text-center">
     <div class="col">
-    <a class="btn btn-primary" type="button" style="margin: 5px;" href="{{ url('/input/create') }}">Crear Cliente</a>
+    <a class="btn btn-primary" type="button" style="margin: 5px;" href="{{ url('/customer/create') }}">Crear Cliente</a>
     </div>
 </div>
 @endsection
