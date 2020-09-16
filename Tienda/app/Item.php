@@ -86,8 +86,8 @@ class Item extends Model{
         $this->belongsTo('App\Supplier');
     }
 
-    public function return(){
-        $this->hasMany('App\ReturnModel');
+    public function refund(){
+        $this->hasMany('App\Refund');
     }
 
     public function sale(){

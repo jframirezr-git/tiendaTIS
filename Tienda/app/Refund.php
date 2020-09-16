@@ -4,9 +4,13 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class ReturnModel extends Model
+/**
+ * @method static findOrFail($id)
+ * @method static create(array $only)
+ */
+class Refund extends Model
 {
-    //attributes 
+    //attributes
     protected $fillable = ['unit_value','date', 'quantity', 'item_id'];
 
     //getters and setters
@@ -59,6 +63,7 @@ class ReturnModel extends Model
     {
         $this->attributes['item_id'] = $item_id;
     }
+
 
     //relationships
     public function item()
