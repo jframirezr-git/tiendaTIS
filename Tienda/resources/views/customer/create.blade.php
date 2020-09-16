@@ -28,7 +28,7 @@
                     <div class="col-6"><label class="col-form-label">Telefono:</label></div>
                     <div class="col"><input class="form-control" type="number" placeholder="Ingrese su telefono" name="phone"></div>
                     <div class="col-6"><label class="col-form-label">Direccion:</label></div>
-                    <div class="col"><input class="form-control" type="number" placeholder="Ingrese su direccion" name="address"></div>
+                    <div class="col"><input class="form-control" type="text" placeholder="Ingrese su direccion" name="address"></div>
                 </div>
                 <input class="btn btn-primary" style="margin: 5px;" type="submit" value="Crear" />
             </form>
