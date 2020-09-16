@@ -1,0 +1,5 @@
+1. Nunca hacer un echo en un controlador.
+2. Toda ruta debe estar asociada a un controlador.
+3. Toda vista debe extender del layout master.
+4. Todas las vistas deben ser Blade.
+5. Nunca usar etiqueta php dentro de las vistas.

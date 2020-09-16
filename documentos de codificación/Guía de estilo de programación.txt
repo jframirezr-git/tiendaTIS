@@ -1,0 +1,18 @@
+Nombre para modelos: Nombre de la clase en inglés
+
+Nombre para controladores: ModeloControlodar
+
+Nombre para migrations: año_mes_dia_create_modelo_table
+
+Nombre para vistas:
+create
+show
+showModelo(prural)
+
+Nombre para variables: data_modelo
+
+Estilo para metodos: 
+method()
+{
+
+}
