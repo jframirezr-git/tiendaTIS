@@ -61,4 +61,11 @@ class ItemController extends Controller
 
         return redirect('/items');
     }
+
+    // Implementación del servicio para proveer lista de productos
+    public function getItem(){
+        $items = Item::all();
+        return response()->json($items);
+    }
+
 }
