@@ -23,8 +23,18 @@ class ServiceController extends Controller
             ]);
             $response = $client->request('GET', "public/api/v3/posts", ['verify' => false]);
             $data = json_decode($response->getBody()->getContents());
-            dd($data);
+            $games = $data->data;
+            return view('groupOne.show', compact('games'));
         }
     }
 
+    public function  getServiceAlianza(){
+        $client = new Client([
+            'base_uri' => 'https://jsonplaceholder.typicode.com',
+            'timeout' => 2.0,
+        ]);
+        $response = $client->request('GET', "users" , ['verify' => false]);
+        $data = json_decode($response->getBody()->getContents());
+        return view('alianza.show', compact('data'));
+    }
 }
