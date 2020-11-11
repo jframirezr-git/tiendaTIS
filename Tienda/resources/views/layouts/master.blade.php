@@ -18,13 +18,17 @@
                     <li class="nav-item"><a class="nav-link" href="{{ url('/sale') }}">{{__('home_page.title_sale')}}</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{url('/customer/show')}}">{{__('home_page.title_client')}}</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{ url('/supplier') }}">{{__('home_page.title_supplier')}}</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{{ url('/api/v1/alianza') }}">Usuarios aliados</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{{ url('/api/v1/grupo1') }}">Entretenimiento</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ url('/api/v1/alianza') }}">{{__('home_page.alliance')}}</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ url('/api/v1/grupo1') }}">{{__('home_page.entertainment')}}</a></li>
                 </ul>
                 <form class="form-inline mr-auto" target="_self">
                     <div class="form-group"><label for="search-field" style="color: rgb(249,246,246);"><i class="fa fa-search" style="height: 19px;width: 15px;color: rgb(7,6,6);"></i></label><input class="form-control search-field" type="search" id="search-field" name="search"
                             style="background: #f7f6f6;box-shadow: 0px 0px;border-top-left-radius: 3px;border-top-right-radius: 3px;border-bottom-right-radius: 3px;border-bottom-left-radius: 7px;"></div>
                 </form>
+                <div class="content">
+                    <li class="nav-item"><a href="/en">{{__('home_page.english')}}</a></li>
+                    <li class="nav-item"><a href="/es">{{__('home_page.spanish')}}</a></li>
+                </div>
             </div>
         </div>
     </nav>

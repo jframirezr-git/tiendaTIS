@@ -18,9 +18,9 @@
                 <div class="card">
                 <div class="card-header">{{$data->id}}</div>
                     <div class="card-body">
-                        <b>Nombre:</b>{{$data->name}}<br/>
-                        <b>Correo:</b>{{$data->email}}<br/>
-                        <b>Teléfono:</b>{{$data->phone}}<br/>
+                        <b>{{__('alianza.name')}}</b>{{$data->name}}<br/>
+                        <b>{{__('alianza.e-mail')}}</b>{{$data->email}}<br/>
+                        <b>{{__('alianza.phone')}}</b>{{$data->phone}}<br/>
                     </div>
                 </div>
             </div>
