@@ -5,5 +5,6 @@ return [
     'value' => 'Valor: ',
     'reference' => 'Referencia: ',
     'see_more_button' => 'Ver mas',
-    'delete_button' => 'Eliminar'
+    'delete_button' => 'Eliminar',
+    'buy_button' => 'Comprar'
 ];
