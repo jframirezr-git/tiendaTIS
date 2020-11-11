@@ -65,5 +65,3 @@ Route::post('/refund/save', 'RefundController@save')->name("refund.save");
 Route::get('api/v1/items', 'ServiceController@getItem');
 Route::get('/api/v1/grupo1', 'ServiceController@getServiceGroup1');
 
-
-
