@@ -26,8 +26,8 @@
                             style="background: #f7f6f6;box-shadow: 0px 0px;border-top-left-radius: 3px;border-top-right-radius: 3px;border-bottom-right-radius: 3px;border-bottom-left-radius: 7px;"></div>
                 </form>
                 <div class="content">
-                    <li class="nav-item"><a href="/en">{{__('home_page.english')}}</a></li>
-                    <li class="nav-item"><a href="/es">{{__('home_page.spanish')}}</a></li>
+                    <li class="nav-item"><a href="{{ url('/en') }}">{{__('home_page.english')}}</a></li>
+                    <li class="nav-item"><a href="{{ url('/es') }}">{{__('home_page.spanish')}}</a></li>
                 </div>
             </div>
         </div>
