@@ -8,5 +8,7 @@ return [
     'create_client' => 'New Client',
     'create_supplier' => 'New Supplier',
     'alliance' => 'Allied users',
-    'entertainment' => 'Entertainment'
+    'entertainment' => 'Entertainment',
+    'english' => 'English',
+    'spanish' => 'Spanish'
 ];

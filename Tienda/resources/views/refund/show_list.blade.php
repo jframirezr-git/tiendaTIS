@@ -16,9 +16,9 @@
                     <div class="card">
                         <div class="card-body">
                             <h4 class="card-title">{{$refund->getDate()}}</h4>
-                            <h6 class="text-muted card-subtitle mb-2">Item:{{$refund->getItemId()}}</h6>
-                            <h6 class="text-muted card-subtitle mb-2">Cantidad:{{$refund->getQuantity()}}</h6>
-                            <h6 class="text-muted card-subtitle mb-2">Valor:{{$refund->getUniteValue()}}</h6>
+                            <h6 class="text-muted card-subtitle mb-2">{{__('show_refund.product')}}{{$refund->getItemId()}}</h6>
+                            <h6 class="text-muted card-subtitle mb-2">{{__('show_refund.quantity')}}{{$refund->getQuantity()}}</h6>
+                            <h6 class="text-muted card-subtitle mb-2">{{__('show_refund.value')}}{{$refund->getUniteValue()}}</h6>
                         </div>
                     </div>
                 </div>

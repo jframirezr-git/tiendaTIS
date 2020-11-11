@@ -64,3 +64,9 @@ Route::post('/refund/save', 'RefundController@save')->name("refund.save");
 Route::get('api/v1/items', 'ServiceController@getItem');
 Route::get('/api/v1/grupo1', 'ServiceController@getServiceGroup1');
 Route::get('/api/v1/alianza', 'ServiceController@getServiceAlianza');
+
+//rutas lenguage
+Route::get('/{locale}',function ($locale){
+    Session::put('locale',$locale);
+    return redirect()->back();
+});
