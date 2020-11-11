@@ -16,10 +16,10 @@
         <div class="col-4 text-center d-lg-flex align-self-center justify-content-lg-start align-items-lg-end">
             <div class="container">
                 <div class="card">
+                <div class="card-header"><b>{{$game->title}}</b></div>
                     <div class="card-body">
-                        <h4 class="card-title">{{$game->title}}</h4>
-                        <div><img src="{{$game->image}}" width="100" height="100"></div>
-                        <h6 class="text-muted card-subtitle mb-2">{{$game->body}}</h6>
+                        <img src="{{$game->image}}" width="110" height="110">
+                        <h6 class="text-muted card-subtitle mb-2" style="margin-top: 10px">{{$game->body}}</h6>
                     </div>
                 </div>
             </div>

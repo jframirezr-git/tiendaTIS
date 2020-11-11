@@ -47,10 +47,5 @@ class SaleController extends Controller
         return redirect('sale');
     }
 
-    public function salePoint(){
-        $data = [];
-        $data["title"] = "Sales Points";
-        return view('salesPoints.show')->with("data",$data);
-    }
 }
 

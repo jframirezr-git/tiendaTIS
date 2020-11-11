@@ -35,6 +35,6 @@ class ServiceController extends Controller
         ]);
         $response = $client->request('GET', "users" , ['verify' => false]);
         $data = json_decode($response->getBody()->getContents());
-        dd($data);
+        return view('alianza.show', compact('data'));
     }
 }
