@@ -55,6 +55,7 @@ Route::get('/sale', 'SaleController@showList')->name("sale.show_list");
 Route::get('/sale/show/{id}', 'SaleController@show')->name("sale.show");
 Route::post('/sale/save', 'SaleController@save')->name("sale.save");
 Route::delete('/sale/delete/{id}', 'SaleController@destroy')->name('sale.delete');
+Route::get('/salesPoints', 'SaleController@salePoint')->name("sale.salePoint");
 
 //rotas devoluciones
 Route::get('/refund', 'RefundController@showList')->name("refund.show_list");
