@@ -64,6 +64,7 @@ Route::post('/refund/save', 'RefundController@save')->name("refund.save");
 //rutas de servicios
 Route::get('api/v1/items', 'ServiceController@getItem');
 Route::get('/api/v1/grupo1', 'ServiceController@getServiceGroup1');
+Route::get('/api/v1/alianza', 'ServiceController@getServiceAlianza');
 
 
 
