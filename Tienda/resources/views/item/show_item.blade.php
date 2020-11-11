@@ -5,14 +5,14 @@
             <div class="card">
                 <div class="card-body">
                     <h4 class="card-title">{{$data["name"]}}</h4>
-                    <h6 class="text-muted card-subtitle mb-2">Stock:{{$data["stock"]}}</h6>
-                    <p class="card-text">Marca:{{ $data["brand"]}}</p>
-                    <p class="card-text">Referencia:{{ $data["reference"]}}</p>
-                    <p class="card-text">Valor:{{ $data["value"]}}</p>
+                    <h6 class="text-muted card-subtitle mb-2">{{__('show_product.stock')}}{{$data["stock"]}}</h6>
+                    <p class="card-text">{{__('show_product.brand')}}{{ $data["brand"]}}</p>
+                    <p class="card-text">{{__('show_product.reference')}}{{ $data["reference"]}}</p>
+                    <p class="card-text">{{__('show_product.value')}}{{ $data["value"]}}</p>
                     <form method="POST" action="{{ url("items/delete/{$data["items"]["id"]}") }}">
                         @csrf
                         @method('DELETE')
-                        <button class="btn btn-primary" type="submit">Eliminar</button>
+                        <button class="btn btn-primary" type="submit">{{__('show_product.delete_button')}}</button>
                     </form>
                 </div>
                 <form method="POST" action="{{ route('sale.save') }}">
@@ -26,7 +26,7 @@
                         <div class="col-6"><input class="form-control" type="text" name="customer_id" value="1" ></div>
                         <div class="col-6"><input class="form-control" type="text" name="item_id" value="{{$data["items"]["id"]}}"></div>
                     </div>
-                    <input class="btn btn-primary" style="margin: 5px;" type="submit" value="Comprar" />
+                    <input class="btn btn-primary" style="margin: 5px;" type="submit" value="{{__('show_product.buy_button')}}" />
                 </form>
             </div>
         </div>
