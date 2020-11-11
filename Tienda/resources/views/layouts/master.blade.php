@@ -18,6 +18,7 @@
                     <li class="nav-item"><a class="nav-link" href="{{ url('/sale') }}">Ventas</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{url('/customer/show')}}">Clientes</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{ url('/supplier') }}">Proveedores</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ url('/salesPoints') }}">Puntos de venta</a></li>
                 </ul>
                 <form class="form-inline mr-auto" target="_self">
                     <div class="form-group"><label for="search-field" style="color: rgb(249,246,246);"><i class="fa fa-search" style="height: 19px;width: 15px;color: rgb(7,6,6);"></i></label><input class="form-control search-field" type="search" id="search-field" name="search"
