@@ -16,10 +16,10 @@
                     <div class="card">
                         <div class="card-body">
                             <h4 class="card-title">{{$sale->getDate()}}</h4>
-                            <h6 class="text-muted card-subtitle mb-2">Item:{{$sale->getItemId()}}</h6>
-                            <h6 class="text-muted card-subtitle mb-2">Cantidad:{{$sale->getQuantity()}}</h6>
-                            <h6 class="text-muted card-subtitle mb-2">Cliente:{{$sale->getCustomerId()}}</h6>
-                            <a class="btn btn-primary" href="{{ route('sale.show', ['id' => $sale->getId()]) }}">Ver más</a>
+                            <h6 class="text-muted card-subtitle mb-2">{{__('show_sales.item')}}{{$sale->getItemId()}}</h6>
+                            <h6 class="text-muted card-subtitle mb-2">{{__('show_sales.quantity')}}{{$sale->getQuantity()}}</h6>
+                            <h6 class="text-muted card-subtitle mb-2">{{__('show_sales.client')}}{{$sale->getCustomerId()}}</h6>
+                            <a class="btn btn-primary" href="{{ route('sale.show', ['id' => $sale->getId()]) }}">{{__('show_sales.see_more_button')}}</a>
                         </div>
                     </div>
                 </div>

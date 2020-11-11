@@ -18,10 +18,10 @@
                 <div class="card">
                     <div class="card-body">
                         <h4 class="card-title">{{$all_items->getName()}}</h4>
-                        <h6 class="text-muted card-subtitle mb-2">Marca:{{$all_items->getBrand()}}</h6>
-                        <h6 class="text-muted card-subtitle mb-2">Stock:{{$all_items->getStock()}}</h6>
-                        <h6 class="text-muted card-subtitle mb-2">Valor:{{$all_items->getValue()}}</h6>
-                        <a class="btn btn-primary" href="{{ route('item.show_item', ['id' => $all_items->getId()]) }}">Ver más</a>
+                        <h6 class="text-muted card-subtitle mb-2">{{__('show_product.brand')}}{{$all_items->getBrand()}}</h6>
+                        <h6 class="text-muted card-subtitle mb-2">{{__('show_product.stock')}}{{$all_items->getStock()}}</h6>
+                        <h6 class="text-muted card-subtitle mb-2">{{__('show_product.value')}}{{$all_items->getValue()}}</h6>
+                        <a class="btn btn-primary" href="{{ route('item.show_item', ['id' => $all_items->getId()]) }}">{{__('show_product.see_more_button')}}</a>
                     </div>
                 </div>
             </div>
@@ -30,7 +30,7 @@
     </div>
     <div class="row text-center">
         <div class="col">
-        <a class="btn btn-primary" type="button" style="margin: 5px;" href="{{ url('/items/create') }}">Crear Producto</a>
+        <a class="btn btn-primary" type="button" style="margin: 5px;" href="{{ url('/items/create') }}">{{__('home_page.create_product')}}</a>
         </div>
     </div>
 @endsection

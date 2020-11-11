@@ -17,9 +17,9 @@
                     <div class="card">
                         <div class="card-body">
                             <h4 class="card-title">{{$supplier->getName()}}</h4>
-                            <h6 class="text-muted card-subtitle mb-2">Contacto:{{$supplier->getContact()}}</h6>
-                            <h6 class="text-muted card-subtitle mb-2">Telefono:{{$supplier->getPhone()}}</h6>
-                            <a class="btn btn-primary" href="{{ route('supplier.show', ['id' => $supplier->getId()]) }}">Ver más</a>
+                            <h6 class="text-muted card-subtitle mb-2">{{__('show_supplier.contact')}}{{$supplier->getContact()}}</h6>
+                            <h6 class="text-muted card-subtitle mb-2">{{__('show_supplier.phone')}}{{$supplier->getPhone()}}</h6>
+                            <a class="btn btn-primary" href="{{ route('supplier.show', ['id' => $supplier->getId()]) }}">{{__('show_supplier.see_more_button')}}</a>
                         </div>
                     </div>
                 </div>
@@ -28,7 +28,7 @@
     </div>
     <div class="row text-center">
         <div class="col">
-            <a class="btn btn-primary" type="button" style="margin: 5px;" href="{{ url('/supplier/create') }}">Nuevo Proveedor</a>
+            <a class="btn btn-primary" type="button" style="margin: 5px;" href="{{ url('/supplier/create') }}">{{__('home_page.create_supplier')}}</a>
         </div>
     </div>
 @endsection

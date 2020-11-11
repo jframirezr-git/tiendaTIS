@@ -14,10 +14,10 @@
             <div class="collapse navbar-collapse"
                 id="navcol-1">
                 <ul class="nav navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="{{ url('/items') }}">Productos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{{ url('/sale') }}">Ventas</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{{url('/customer/show')}}">Clientes</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{{ url('/supplier') }}">Proveedores</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ url('/items') }}">{{__('home_page.title_product')}}</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ url('/sale') }}">{{__('home_page.title_sale')}}</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{url('/customer/show')}}">{{__('home_page.title_client')}}</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ url('/supplier') }}">{{__('home_page.title_supplier')}}</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{ url('/salesPoints') }}">Puntos de venta</a></li>
                 </ul>
                 <form class="form-inline mr-auto" target="_self">

@@ -4,7 +4,7 @@
     <div class="row text-center justify-content-center align-items-center" style="margin: 5px;margin-top: 5%;">
         <div class="col">
             <div class="container">
-                <h2>Crear Producto</h2>
+                <h2>{{__('create_product.title_create_product')}}</h2>
                  @include('util.message')
                  @if($errors->any())
                 <ul id="errors">
@@ -16,20 +16,20 @@
                 <form method="POST" action="{{ route('item.save') }}">
                     @csrf
                     <div class="form-row text-center justify-content-center align-items-center">
-                        <div class="col-6"><label class="col-form-label">Nombre:</label></div>
-                        <div class="col-6"><input class="form-control" type="text" placeholder="Ingresa el nombre" name="name"></div>
-                        <div class="col-6"><label class="col-form-label">Marca:</label></div>
-                        <div class="col-6"><input class="form-control" type="text" placeholder="Ingresa la marca" name="brand"></div>
-                        <div class="col-6"><label class="col-form-label">Referencia:</label></div>
-                        <div class="col-6"><input class="form-control" type="text" placeholder="Ingresa la referencia" name="reference"></div>
-                        <div class="col-6"><label class="col-form-label">Stock:</label></div>
-                        <div class="col"><input class="form-control" type="number" placeholder="Ingresa el stock" name="stock"></div>
-                        <div class="col-6"><label class="col-form-label">Valor:</label></div>
-                        <div class="col"><input class="form-control" type="number" placeholder="Ingresa el valor" name="value"></div>
-                        <div class="col-6"><label class="col-form-label">Id del proveedor:</label></div>
-                        <div class="col"><input class="form-control" type="number" placeholder="Ingresa el proveedor id" name="supplier_id"></div>
+                        <div class="col-6"><label class="col-form-label">{{__('create_product.name')}}</label></div>
+                        <div class="col-6"><input class="form-control" type="text" placeholder="{{__('create_product.name_placeholder')}}" name="name"></div>
+                        <div class="col-6"><label class="col-form-label">{{__('create_product.brand')}}</label></div>
+                        <div class="col-6"><input class="form-control" type="text" placeholder="{{__('create_product.brand_placeholder')}}" name="brand"></div>
+                        <div class="col-6"><label class="col-form-label">{{__('create_product.reference')}}</label></div>
+                        <div class="col-6"><input class="form-control" type="text" placeholder="{{__('create_product.reference_placeholder')}}" name="reference"></div>
+                        <div class="col-6"><label class="col-form-label">{{__('create_product.stock')}}</label></div>
+                        <div class="col"><input class="form-control" type="number" placeholder="{{__('create_product.stock_placeholder')}}" name="stock"></div>
+                        <div class="col-6"><label class="col-form-label">{{__('create_product.value')}}</label></div>
+                        <div class="col"><input class="form-control" type="number" placeholder="{{__('create_product.value_placeholder')}}" name="value"></div>
+                        <div class="col-6"><label class="col-form-label">{{__('create_product.id_supplier')}}</label></div>
+                        <div class="col"><input class="form-control" type="number" placeholder="{{__('create_product.id_supplier_placeholder')}}" name="supplier_id"></div>
                     </div>
-                    <input class="btn btn-primary" style="margin: 5px;" type="submit" value="Crear" />
+                    <input class="btn btn-primary" style="margin: 5px;" type="submit" value="{{__('create_product.create_button')}}" />
                 </form>
             </div>
         </div>
