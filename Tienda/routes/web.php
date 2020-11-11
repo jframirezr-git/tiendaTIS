@@ -61,6 +61,8 @@ Route::get('/refund', 'RefundController@showList')->name("refund.show_list");
 Route::post('/refund/save', 'RefundController@save')->name("refund.save");
 
 //rutas de servicios
-Route::get('api/v1/items', 'ItemController@getItem');
+Route::get('api/v1/items', 'ServiceController@getItem');
+Route::get('/api/v1/grupo1', 'ServiceController@getServiceGroup1');
+
 
 
