@@ -23,7 +23,8 @@ class ServiceController extends Controller
             ]);
             $response = $client->request('GET', "public/api/v3/posts", ['verify' => false]);
             $data = json_decode($response->getBody()->getContents());
-            dd($data);
+            $games = $data->data;
+            return view('groupOne.show', compact('games'));
         }
     }
 
