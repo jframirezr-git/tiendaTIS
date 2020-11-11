@@ -1,6 +1,6 @@
 <?php
 return [
-    'title_product' => 'Producto',
+    'title_product' => 'Productos',
     'title_sale' => 'Ventas',
     'title_client' => 'Clientes',
     'title_supplier' => 'Proveedores',

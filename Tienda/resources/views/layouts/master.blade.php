@@ -26,8 +26,14 @@
                             style="background: #f7f6f6;box-shadow: 0px 0px;border-top-left-radius: 3px;border-top-right-radius: 3px;border-bottom-right-radius: 3px;border-bottom-left-radius: 7px;"></div>
                 </form>
                 <div class="content">
-                    <li class="nav-item"><a href="{{ url('/en') }}">{{__('home_page.english')}}</a></li>
-                    <li class="nav-item"><a href="{{ url('/es') }}">{{__('home_page.spanish')}}</a></li>
+                    <div class="row">
+                        <div>
+                            <a href="{{ url('/en') }}"><img src="https://images.vexels.com/media/users/3/163966/isolated/preview/6ecbb5ec8c121c0699c9b9179d6b24aa-inglaterra-bandera-idioma-icono-c--rculo-by-vexels.png" width="30" heigth="30"/></a>
+                        </div>
+                        <div style="margin-left: 15px">
+                            <a href="{{ url('/es') }}"><img src="https://images.vexels.com/media/users/3/164599/isolated/preview/ce858535b77f22068049aca2457e59ad-bandera-de-espa--a-idioma-icono-circulo-by-vexels.png" width="30" heigth="30"/></a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
