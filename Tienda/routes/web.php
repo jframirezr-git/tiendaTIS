@@ -49,7 +49,7 @@ Route::get('/supplier', 'SupplierController@showList')->name("supplier.show_list
 Route::get('/supplier/show/{id}', 'SupplierController@show')->name("supplier.show");
 Route::get('/supplier/create', 'SupplierController@create')->name("supplier.create");
 Route::post('/supplier/save', 'SupplierController@save')->name("supplier.save");
-Route::delete('/supplier/delete/{id}', 'SupplierController@deletecustomer')->name('supplier.delete');
+Route::delete('/supplier/delete/{id}', 'SupplierController@destroy')->name('supplier.delete');
 
 //rutas ventas
 Route::get('/sale', 'SaleController@showList')->name("sale.show_list");
